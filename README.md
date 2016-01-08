@@ -1,11 +1,10 @@
-sf_tutorial_base
-==========
+sitebase
+========
 
-Symfony チュートリアル用スケルトン 
+Symfonyで作るウェブサイトの雛形
 
-- Locale: ja
-- DB: SQLite
-- CSS: Bootstrap3 CDN
-- Layout Template: Bootstrap3
-- CRUD Template: Bootstrap3
-- Form: Bootstrap3
+- Twigを使った静的ページの追加（コントローラーの定義なしでページを追加可能）
+- コンタクトフォーム（問い合わせ内容をメールで送信）
+- ニュースの表示（WordPressと連動して、記事一覧と記事を表示）
+- CSSにBootstrap3を使用
+
