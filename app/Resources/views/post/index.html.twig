@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}News{% endblock %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <h1>News</h1>
+
+            <hr/>
+            {% for post in posts %}
+                <article>
+                    <h2><a href="{{ path('post_show', {'id': post['ID']}) }}">{{ post['title'] }}</a></h2>
+                    {{ post['excerpt']|raw }}
+                    <span class="glyphicon glyphicon-time"></span> {{ post['date']|date('Y/m/d H:i') }}
+                </article>
+                <hr/>
+            {% endfor %}
+
+            <a href="{{ url }}" class="btn btn-default">もっと読む</a><br/>
+            <br/>
+        </div>
+    </div>
+{% endblock %}
+

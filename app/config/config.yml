@@ -72,3 +72,13 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+# 8p/GuzzleBunndle
+guzzle:
+    clients:
+        api_wp_com:
+            base_url: "https://public-api.wordpress.com/rest/v1.1/sites/ja.blog.wordpress.com/"
+
+            headers:
+                Accept: "application/json"
+
