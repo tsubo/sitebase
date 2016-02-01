@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ item._title }}{% endblock %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <h1>{{ item._title }}</h1>
+
+            {{ item._content|raw }}
+
+            <hr/>
+
+            <a href="{{ path('blog_index') }}" class="btn btn-default">Blog に戻る</a><br/>
+            <br/>
+        </div>
+    </div>
+{% endblock %}

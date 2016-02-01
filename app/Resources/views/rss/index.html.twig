@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ rss._title }}{% endblock %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <h1>{{ rss._title }}</h1>
+
+            <hr/>
+            {% set max = rss._item_quantity - 1 %}
+            {% for idx in 0..max %}
+                {% set item = rss._item(idx) %}
+                <article>
+                    <h2><a href="{{ path('blog_show', {'id': idx}) }}">{{ item._title }}</a></h2>
+                    <p>{{ item._description|preg_replace("/<div>[\n\t.]*<a.*div>/", '...')|raw }}</p>
+                    <span class="glyphicon glyphicon-time"></span> {{ item._date|date('Y/m/d H:i') }}
+                </article>
+                <hr/>
+            {% endfor %}
+
+            <a href="{{ url }}" class="btn btn-default">もっと読む</a><br/>
+            <br/>
+        </div>
+    </div>
+{% endblock %}

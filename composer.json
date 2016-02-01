@@ -26,7 +26,9 @@
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
-        "eightpoints/guzzle-bundle": "^4.4"
+        "eightpoints/guzzle-bundle": "^4.4",
+        "fkr/simplepie-bundle": "1.0.*@dev",
+        "jasny/twig-extensions": "^1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

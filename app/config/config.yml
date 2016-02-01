@@ -82,3 +82,9 @@ guzzle:
             headers:
                 Accept: "application/json"
 
+# fkrauthan/FkrSimplePieBundle
+fkr_simple_pie:
+    cache_enabled: false
+    cache_dir: %kernel.cache_dir%/rss
+    cache_duration: 3600
+    idna_converter: ~ #default is false

@@ -7,3 +7,9 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    # jasny/twig-extensions   Twig で正規表現を使った置換を可能にする為に使用
+    twig.extension.pcre:
+        class: Jasny\Twig\PcreExtension
+        tags:
+          - { name: twig.extension }
